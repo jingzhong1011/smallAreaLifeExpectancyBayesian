@@ -85,6 +85,7 @@ ktExtension <- function(lx70){
   B <- coef(mod)[2]
   
   # Calculate qx for age x >= 85
+  # Expand to age 129
   ages_extrapolate <- 85: 129
   logitqx85 <- logA + B * (ages_extrapolate + 0.5)
   qx85 <- exp(logitqx85) / (1 + exp(logitqx85))
